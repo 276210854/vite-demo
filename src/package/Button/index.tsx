@@ -1,6 +1,10 @@
 import React from 'react';
 import './button.css';
+import styled from 'styled-components'
 
+const A = styled.button`
+  color: red;
+`
 interface ButtonProps {
   /**
    * Is this the principal call to action on the page?
@@ -36,13 +40,13 @@ export const Button = ({
 }: ButtonProps) => {
   const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
   return (
-    <button
+    <A
       type="button"
       className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
       style={{ backgroundColor }}
       {...props}
     >
       {label}
-    </button>
+    </A>
   );
 };
