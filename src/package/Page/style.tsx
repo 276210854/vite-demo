@@ -1,3 +1,5 @@
+import { createGlobalStyle } from 'styled-components'
+const PageStyle = createGlobalStyle`
 section {
   font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -67,3 +69,7 @@ section .tip-wrapper svg {
 section .tip-wrapper svg path {
   fill: #1ea7fd;
 }
+
+`
+
+export default PageStyle
