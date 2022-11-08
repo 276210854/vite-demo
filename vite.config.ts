@@ -13,7 +13,7 @@ export default defineConfig({
     //css分离
     cssCodeSplit: true,
     rollupOptions: {
-        //忽略打包vue文件
+        //忽略打包react文件
         external: ['react'],
         input: ['src/package/index.ts'],
         output: [
