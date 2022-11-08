@@ -2,8 +2,8 @@ name: npm Push
 
 on: 
   push:
-    tags:
-      - 'v*'
+    branches:
+      - main # Change this to your default branch
 
 jobs:
   build-push:
