@@ -1,5 +1,5 @@
 import React from 'react';
-import './button.css';
+import ButtonStyle from './style';
 import styled from 'styled-components'
 
 const A = styled.button`
@@ -40,13 +40,16 @@ export const Button = ({
 }: ButtonProps) => {
   const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
   return (
-    <A
-      type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-      style={{ backgroundColor }}
-      {...props}
-    >
-      {label}
-    </A>
+    <>
+      <ButtonStyle />
+      <A
+        type="button"
+        className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
+        style={{ backgroundColor }}
+        {...props}
+      >
+        {label}
+      </A>
+    </>
   );
 };
